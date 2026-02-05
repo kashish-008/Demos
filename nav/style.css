@@ -1,0 +1,151 @@
+@import url("https://fonts.cdnfonts.com/css/gilroy-bold");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  color: aliceblue;
+  background-color: #000;
+  background-image: url("https://images.unsplash.com/photo-1768813282031-2aec62eee8b7?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  font-family: "Gilroy-Regular", sans-serif;
+}
+
+/* NAVBAR */
+
+header {
+  padding: 0 2rem;
+}
+
+.navbar {
+  height: 60px;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: orange;
+}
+
+/* BUTTONS */
+
+.btn-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.action_btn {
+  background: orange;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: white;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.action_btn:hover {
+  background: #f6a610;
+  transform: scale(1.05);
+}
+
+.action_btn:active {
+  transform: scale(0.95);
+}
+
+/* TOGGLE */
+
+.toggle_btn {
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: none;
+}
+
+/* DROPDOWN */
+
+.dropdown-menu {
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  width: 260px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 12px;
+
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 1rem;
+}
+
+.dropdown-menu li {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.dropdown-menu.open {
+  min-height: 300px;
+}
+
+/* hero */
+#hero{
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+#hero h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .links,
+  .btn-group {
+    display: none;
+  }
+
+  .toggle_btn {
+    display: block;
+  }
+}
