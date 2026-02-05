@@ -19,3 +19,11 @@ function closeMenu() {
 document.querySelectorAll("#mobileMenu a").forEach(link => {
   link.onclick = () => closeMenu();
 });
+
+const current = location.pathname.split("/").pop();
+
+document.querySelectorAll("a").forEach(link => {
+  if (link.getAttribute("href") === current) {
+    link.classList.add("active-link");
+  }
+});

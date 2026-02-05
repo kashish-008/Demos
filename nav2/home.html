@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 </head>
 <body>
     <header>
@@ -26,7 +33,37 @@
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
+
+        <!-- Mobile Sidebar Menu -->
+      <div class="menu-overlay" id="menuOverlay"></div>
+
+      <div class="dropdown-menu" id="mobileMenu">
+        <div class="menu-header">
+          <i class="fa-solid fa-xmark" id="closeMenu"></i>
+        </div>
+
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#features">Services</a></li>
+          <li><a href="#pricing">Contact Us</a></li>
+          <li><a href="#" class="action-btn sidebar-btn">SignUp</a></li>
+          <li><a href="#" class="action-btn sidebar-btn">SignIn</a></li>
+        </ul>
+        <div class="sidebar-social">
+          <p>Connect</p>
+
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </div>
     </header>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolores consequatur beatae?</p>
+
+    <script src="script.js"></script>
 </body>
 </html>
